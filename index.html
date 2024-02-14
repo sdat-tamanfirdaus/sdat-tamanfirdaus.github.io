@@ -1,0 +1,881 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="icon" sizes="16x16" type="image/png">
+		<title>SDAT Taman Firdaus</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>	
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<style>
+			body, html {
+  padding-top:0.5em;
+  margin:0;
+  background-color: white;
+  color: black;
+  font-size: 13pt;
+  font-family: "Open Sans"
+  border-radius: 6px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+h2{
+  font-weight: normal;
+  margin: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+h3{
+  font-weight:300;
+  font-size:1em;
+  margin: 0em;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-size: 0.6em;
+}
+
+.summary p{
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left:2em;
+}
+
+.new {
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Merriweather";
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin-top:-3em;
+
+  border-radius:10em;
+
+  border: 2px solid #dddddd;
+  cursor:pointer;
+}
+
+@keyframes intro {
+  from {
+    height:0em;
+  }
+
+  to {
+    height: 6em;
+  }
+}
+
+.pic{
+  height: 6em;
+  transition: .3s;
+}
+
+.pic:hover{
+  transform: translateY(20px) scale(2);
+}
+
+.pic:hover ~ .content-wrapper{
+  transform: translateY(75px);
+}
+
+header p {
+  text-align:center;
+
+  margin:0;
+
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  font-size:0.7em;
+  font-weight:500;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+
+  width:90%;
+
+  padding:0.5em 0 0.5em 0;
+
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  border-radius: 3px;
+
+  text-align: center;
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right: 5.25%;
+  padding-left: 5.25%;
+  transition: .3s;
+  padding-bottom: 20px;
+
+  text-align: left;
+}
+
+.content {
+  display:table;
+  width:100%;
+
+  padding-top:1.5em;
+
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+
+.work-listing .first-listing{
+  margin-top: 1.8em;
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  text-align:center;
+  vertical-align:middle;
+  font-variant:small-caps;
+
+  letter-spacing: 1px;
+
+
+  font-family: "Merriweather";
+
+  width:25%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #dddddd;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+
+  width:85%;
+  margin-left:1em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.content-text ul li:first-child {
+  width:25%;
+
+
+  font-weight:600;
+}
+
+.content-text ul li a:hover {
+
+}
+
+.work-listing p {
+  font-size:0.7em;
+
+
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-size:0.7em;
+  font-weight:400;
+
+
+  margin-left:3.25em;
+  padding-left:0.5em;
+
+  border-left:1px solid #dddddd;
+}
+
+.assignment {
+  border-left: 1px solid #dddddd;
+}
+
+.education-listing > .heading {
+  font-weight:600;
+
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-print{
+  display: none;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:21%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+div.content-text.skills-listing > p {
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+.no-nl{
+  display: inline-block;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+a{
+  text-decoration: none;
+
+}
+
+.fa{
+  color: #000;
+}
+
+.network{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.7em;
+}
+
+@media(max-width:1400px) {
+  .paper {
+    width:80%;
+
+  }
+
+  .content-cat{
+    padding-left:2%;
+  }
+
+  .content-wrapper{
+    padding-right: 2%;
+  }
+}
+
+footer { 
+  padding: .5vw;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+footer div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 99%; 
+  margin: .5vw; 
+}
+footer div img { 
+  width: 100%; 
+  height: auto; 
+}
+@media screen and (max-width: 99%) {
+  footer div { margin: 0; }
+  footer { padding: 0; }
+}  
+#myDIV {
+  height:auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 6px;
+  padding: 4px;
+  grid: 41% / auto auto auto;
+}
+
+		</style>
+
+		<style media="screen">
+			@media(max-width:795px) {
+  .paper {
+    width:96%;
+
+  }
+
+  .pic{
+    cursor: auto;
+  }
+
+  .content-cat{
+    padding-left:1%;
+  }
+
+  .content-wrapper{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .profiles-listing ul li, .profiles-listing ul li:first-child{
+    width: 49%;
+  }
+
+  .small-fullwidth-row{
+    display: block;
+  }
+
+  .small-fullwidth-row div{
+    display: block;
+    width:100%;
+  }
+
+  .small-fullwidth-row .content-text{
+    border-left: 2px solid #dddddd;
+  }
+
+  .small-center{
+    text-align: center;
+  }
+
+  .work-listing .first-listing{
+    margin-top: 0.45em;
+  }
+
+  .work-listing .small-center{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .top-content h3{
+    width: 100px;
+  }
+}
+
+		</style>
+
+		<style media="print">
+			
+body, html {
+
+  padding-top: 1.5em;
+  font-size:12pt;
+  font-family: "Merriweather";
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  margin-top:0em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.pic{
+  height:4.2em;
+  width:4.2em;
+
+  transform: translate(-8em, 1.9em);
+}
+
+.profiles {
+  display:none;
+}
+
+.profiles-print{
+  display: table;
+}
+
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:25%;
+  position: relative;
+  right: 4%;
+  color:black;
+}
+
+.content-cat p {
+  font-size:0.5em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:white;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.summary p{
+  color: black;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+
+		</style>
+	</head>
+	<body>
+		<div style="border-radius:6px" class="resume-wrapper">
+			<article style="border-radius:6px" class="paper">
+					<div class="content-wrapper">
+						<header>
+							<div class="header-content">
+								<div class="header-text">
+								<span><img style="border-radius:2.5%" class="" width="25%" src="//atf.faqir.id/sd/sd.png"/></span><span>	<h2><b>SDAT Taman Firdaus</b></h2></span>
+									<p class="subtitle">NPSN: 69873993 &nbsp;▪︎&nbsp; NSS: 102026512028 </p>
+								</div>
+							</div>
+						</header>
+<section class="content summary">
+								<div class="row small-fullwidth-row">
+									<div class="content-cat">
+									 <h3>About </h3>
+									</div>
+									<div class="content-text work-content">
+										<p style="">
+Sekolah Dasar Alam Terpadu Taman Firdaus [<em>sdat.tf</em>] merupakan tingkat lanjutan dari pendidikan sebelumnya yaitu KB TK Alam Taman Firdaus. Cita-cita pendiri sekolah tersebut sungguh mulia, sekarang operasional dan kepemilikannya diteruskan oleh pihak keluarga sebab beliau sudah almarhum. Rumusan visi misi sekolah dibuat menurut arahan almarhum Pak Haji oleh team manajemen yayasan yang memadukan konsep keislaman, alam serta teknologi dalam program unggulan sehingga bermanfaat & diakui status akreditasinya oleh sistem di kedinasan juga masyarakat sekitar. Kepemimpinan di SDAT Taman Firdaus telah berganti selama tiga periode kepala sekolah. Alumni GTY pun ada yang lulus program PPPK. Sedangkan alumni siswa-siswi telah <b>lulus</b> delapan angkatan sampai dengan TA.2022/2023.
+										</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- CONTACT -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Kontak</h3>
+								</div>
+								<div class="content-text">
+										<ul>
+											<li>Email</li>
+											<li><a href="mailto:alamtamanfirdaus2018@gmail.com" style="font-size:10px"><textarea style="border:0;border-radius:2px" rows="1.3" cols="27" placeholder="alamtamanfirdaus2018@gmail.com"></textarea></a></li>
+										</ul>
+
+
+										<ul>
+											<li>Website</li>
+											<li><a href="//sdat-tamanfirdaus.sch.id" style="color:grey">&nbsp; sdat-tamanfirdaus.sch.id</a></li>
+										</ul>
+
+										<ul>
+											<li>Telepon</li>
+											<li><a href="tel:+622182616991" style="color:grey">&nbsp; 021-82616991</a></li>
+										</ul>
+								</div>
+							</div>
+						</section>
+
+						<!-- LOCATION -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Lokasi</h3>
+								</div>
+<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+<strong>Negara </strong></span>
+<span> (ID) </span>
+Indonesia
+</p>
+<p><span class="name">
+<strong>Provinsi</strong> <span>Jabar </span> • <strong> Kota</strong></span>
+Bekasi
+</p>
+<p><span class="name">
+<strong>Alamat</strong></span>
+<br/><span>(Sekolah) </span> Jln.Bayan 𝙸𝙸 RT.03/11 Kp.Ciketing
+<br/><span>(Akses Jalan) </span> MGT Blok J1 RT.06/25 Mustikajaya 17168
+										</p>
+								</div>
+<!--								<section class="content top-content">
+									<div class="row">
+										<div class="content-cat">
+										 <h3>Lokasi</h3>
+										</div>
+										<div class="content-text">
+
+
+												<ul>
+													<li>Negara</li>
+													<li>Indonesia</li>
+												</ul>
+
+												<ul>
+													<li>Kota</li>
+													<li>Bekasi</li>
+												</ul>
+												<ul>
+												<li>Alamat</li>
+												<li>Jln. Bayan II RT.03/011 Kel./Kec. Mustika Jaya</li>
+												<li>Akses Kendaraan via MGT Blok J1 RT.06/25 Mustika Jaya</li></ul>
+
+
+										</div>-->
+
+									</div>
+								</section>
+
+
+						<!-- LANGUAGE -->
+
+						<!-- PROFILES for website-->
+							<section class="content profiles top-content">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Sosmed</h3>
+									</div>
+									<div class="content-text profiles-listing">
+										<ul>
+													<li>
+													<a href="https://www.instagram.com/sdat.tamanfirdaus" target="_blank">
+														<i class="bi bi-instagram" style="font-size:x-large;color:grey"></i>
+														<span class="network"></span>
+													</a>
+													</li>
+													<li>
+													<a href="https://facebook.com/sdat.tf" target="_blank">
+														<i class="fa fa-facebook-square" style="font-size:27px;color:grey"></i>
+														<span class="network"></span>
+													</a>
+													</li><!--
+<li>
+<a href="https://api.whatsapp.com/send/?phone=6289522303281&text=Salam " target="_blank">
+<i class="fa fa-whatsapp" style="font-size:x-large; color:green"></i>
+<span class="network"></span>
+</a>
+</li>
+										-->
+										</ul>
+									</div>
+								</div>
+							</section>
+						<!-- PROFILES for print -->
+							<section class="content profiles-print">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text">
+											<ul>
+												<li>twitter</li>
+												<li><a href="https://twitter.com/at_tamanfirdaus">twitter.com/</a></li>
+											</ul>
+											<ul>
+												<li>github</li>
+												<li><a href="https://github.com/sdat-tamanfirdaus">github.com/</a></li>
+											</ul>
+									</div>
+								</div>
+							</section>
+
+							
+<!--								<section class="content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+											<h3>Work	Experience</h3>
+
+											<p><span class="no-nl">2017-06-16</span> to <span class="no-nl">Present</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+<p class="highlight">Admin WhatsApp Group</p>	</div>
+							</div>
+						</section>
+										<!--	<p>—</p>
+
+												<p class="highlight">—</p>
+												<p class="highlight">—</p>
+												<p class="highlight">—</p>
+
+								</div>
+							</div>
+						</section>
+
+
+								<section class="content">
+								<div class="row">
+									<div class="content-cat big-text">
+
+											<h3>Education</h3>
+
+												<p><span class="no-nl">2005-09-17</span> to <span class="no-nl">2009-12-03</span></p>
+
+									</div>
+									<div class="content-text work-listing education-listing">
+												<p class="heading first-listing">The University of </p>
+
+											<p class="highlight">
+												TB:
+											<i>Computer Operator (incomplete)</i>
+											</p>
+
+									</div>
+								</div>
+							</section>
+
+							<section class="content">
+								<div class="row">
+									<div class="content-cat big-text">
+											<h3>Awards</h3>
+
+											<p>Defender of the Internet</p>
+
+
+									</div>
+									<div class="content-text work-listing">
+
+									 		<strong><p class="heading">Fight or Flight For The Future</p></strong>
+
+									</div>
+								</div>
+							</section> 
+
+						<section class="content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Interests</h3>
+								</div>
+								<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+											<strong>
+												Gardening:
+											</strong>
+										</span>
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+												Music / Gamming:
+											</strong>
+										</span>
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+												Reading / Writing:
+											</strong>
+										</span>
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+												Open Source:
+											</strong>
+										</span>
+										</p>
+								</div>
+							</div>
+						</section>-->
+				</div>
+			</article>
+			<footer>
+<div id="myDIV">
+	<div class="item1"><a href="#"><img style="border-radius:6px" src="https://eka.dartiwi.my.id/sd/sdat_tf.jpg" alt></a></div>
+	<div class="item2"><a href="https://maps.app.goo.gl/7HhfEtAYB6Xerv8G8"><img style="border-radius:6px" src="https://eka.dartiwi.my.id/sd/sdat-tf.jpg" alt></a></div>
+</div>
+</footer>		 
+<center>
+<a href="https://api.whatsapp.com/send/?phone=6289522303281&text=Salam " target="_blank">
+<i class="fa fa-whatsapp" style="color:#127C7E;font-size:x-large"></i>
+<span class="network"></span></a>
+<span><button style="color:grey" type="button" class="btn"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Indonesia's Time.</button></span>&nbsp;<span>
+
+<i style="border-color:red;border-style: dotted; border-radius:50%; rotate: 29deg; color:grey;font-size:x-large" onclick="myFunction()" class="fa fa-moon-o"></i></span>
+<p style="font-family: 'VT323';font-size: 25px;color:red" id="demo"></p></center>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script> </div><br/>
+	</body>
+</html>

@@ -1,0 +1,1230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="https://lh3.googleusercontent.com/-mzrxYT24JTw/ZcwQVH4b_4I/AAAAAAAAAkg/A32u82Q6D9sodMmk8Le9z9g57vgWOCFGgCNcBGAsYHQ/h100/atf.png" rel="icon" sizes="16x16" type="image/png">
+		<title id="url"> </title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Livvic&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"/>
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>	
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+document.getElementById("url").innerHTML = window.location.hostname + " • مَدْرَسَۃٌ";
+</script>
+		<style>
+* {
+  box-sizing: border-box;
+}
+		
+			body, html {
+  scroll-behavior: smooth;
+  padding-top:0.5em;
+  margin:0;
+  background-color: white;
+  color: black;
+  font-size: 13pt;
+  font-family: "Open Sans"
+  border-radius: 6px;
+ a:link { color: black;}
+ a:visited { color: black;}
+ a:hover { color: #000;}
+ a:active { color: black; text-decoration:none;}
+
+input, select, textarea { color: grey;}
+}
+
+.menu-container {
+  width: 100%;
+  height: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.menu-item {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(68,68,68,.2);
+  border: 0.1px ridge grey;
+  border-radius: 6px;
+  color: black;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.ignielToTop {width:30px; height:30px; position:fixed; bottom:80px; right: 20px; z-index:99; cursor:pointer; border-radius:10px; transition:all .5s ease; opacity:0; visibility:hidden; animation:ignielDelay .75s 3s forwards; -moz-animation:ignielDelay .75s 3s forwards; -webkit-animation:ignielDelay .75s 3s forwards; -o-animation:ignielDelay .75s 3s forwards; background:teal url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fefe69'/%3E%3C/svg%3E") no-repeat center center;}
+.ignielToTop:hover {background:#1d2129 url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;opacity:0.5}
+.ignielToTop:active, .ignielToTop:focus {bottom:100%;}
+@keyframes ignielDelay {
+  to {opacity:0.5; visibility:visible;}
+}
+@-webkit-keyframes ignielDelay {
+  to {opacity:0.6; visibility:visible;}
+}
+@-moz-keyframes ignielDelay {
+  to {opacity:0.7; visibility:visible;}
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode input, select, textarea { color: silver;text-shadow: 0px 0.2px 0.1px rgba(0,0,0,1)}
+.dark-mode input::placeholder { color: #aaa; }
+.dark-mode a:link { color: white;}
+.dark-mode a:visited { color: white;}
+.dark-mode a:hover { color: #ffffff;}
+.dark-mode a:active { color: white; text-decoration:none;}
+.dark-mode font {color:white}
+
+.box{
+  margin-left:1%;
+  margin:0 auto;
+  width:99%;
+  line-height: 100px;
+  border: 0;
+  text-align: center;
+  opacity: 1;
+  display: none;
+  animation: FadeIn 1s ease-in-out;
+  
+  &.active {
+    display: block;
+    opacity: 0;
+    animation: FadeOut 1s ease-in-out;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display:none;
+    opacity: 0;
+  }
+}
+
+h2{
+  font-weight: normal;
+  margin: 0.5em auto;
+  margin-bottom: 0.2em;
+  text-align: center;
+  line-height: .75;
+}
+
+h3{
+  font-weight:300;
+  font-size:1em;
+  margin: 0em;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-size: 0.6em;
+}
+
+.summary p{
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left:2em;
+}
+
+.new {
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Merriweather";
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin-top:-3em;
+
+  border-radius:10em;
+
+  border: 2px solid #dddddd;
+  cursor:pointer;
+}
+
+@keyframes intro {
+  from {
+    height:0em;
+  }
+
+  to {
+    height: 6em;
+  }
+}
+
+.pic{
+  height: 6em;
+  transition: .3s;
+}
+
+.pic:hover{
+  transform: translateY(20px) scale(2);
+}
+
+.pic:hover ~ .content-wrapper{
+  transform: translateY(75px);
+}
+
+header p {
+  text-align:center;
+
+  margin:0;
+
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  font-size:0.7em;
+  font-weight:500;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+
+  width:90%;
+
+  padding:0.5em 0 0.5em 0;
+
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  border-radius: 3px;
+
+  text-align: center;
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right: 5.25%;
+  padding-left: 5.25%;
+  transition: .3s;
+  padding-bottom: 20px;
+
+  text-align: left;
+}
+
+.content {
+  display:table;
+  width:96%;
+  text-align: justify;
+  
+  padding-top:1.5em;
+
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+
+.work-listing .first-listing{
+  margin-top: 1.8em;
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  text-align:center;
+  vertical-align:middle;
+  font-variant:small-caps;
+
+  letter-spacing: 1px;
+
+
+  font-family: "Merriweather";
+
+  width:25%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+
+  margin-bottom:0;
+}
+
+
+.kontent-text {
+  border-left:1px solid #dddddd;
+  transition: border 0.66s ease-in;
+}
+.kontent-text p::first-line {
+  border-radius:6px; background-color: rgb(255,240,0,0.2);
+}
+
+
+.kontent-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+
+  width:90%;
+  margin-left:1em;
+}
+
+.kontent-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.kontent-text ul li {
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.kontent-text ul li:first-child {
+  width:25%;
+
+
+  font-weight:600;
+}
+
+.kontent-text ul li a:hover {
+
+}
+
+.content-text {
+  border-left:1px solid #dddddd;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+
+  width:90%;
+  margin-left:1em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.content-text ul li:first-child {
+  width:25%;
+
+
+  font-weight:600;
+}
+
+.content-text ul li a:hover {
+
+}
+
+.work-listing p {
+  font-size:0.7em;
+
+
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-size:0.7em;
+  font-weight:400;
+
+
+  margin-left:3.25em;
+  padding-left:0.5em;
+
+  border-left:1px solid #dddddd;
+}
+
+.assignment {
+  border-left: 1px solid #dddddd;
+}
+
+.education-listing > .heading {
+  font-weight:600;
+
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-print{
+  display: none;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:21%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+div.content-text.skills-listing > p {
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 1.5em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+.no-nl{
+  display: inline-block;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+a{
+  text-decoration: none;
+
+}
+
+.fa{
+  color: #000;
+}
+
+.network{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.7em;
+}
+
+@media(max-width:1400px) {
+  .paper {
+    width:80%;
+
+  }
+
+  .content-cat{
+    padding-left:2%;
+  }
+
+  .content-wrapper{
+    padding-right: 2%;
+  }
+}
+
+
+footer { 
+  padding: .5vw;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+footer div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 99%; 
+  margin: .5vw; 
+}
+footer div img { 
+  width: 100%; 
+  height: auto; 
+}
+@media screen and (max-width: 99%) {
+  footer div { margin: 0; }
+  footer { padding: 0; }
+}  
+#myDIV {
+  height:auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 6px;
+  padding: 4px;
+  grid: 41% / auto auto auto;
+}
+
+		</style>
+
+		<style media="screen">
+			@media(max-width:795px) {
+  .paper {
+    width:96%;
+
+  }
+
+  .pic{
+    cursor: auto;
+  }
+
+  .content-cat{
+    padding-left:1%;
+  }
+
+  .content-wrapper{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .profiles-listing ul li, .profiles-listing ul li:first-child{
+    width: 49%;
+  }
+
+  .small-fullwidth-row{
+    display: block;
+  }
+
+  .small-fullwidth-row div{
+    display: block;
+    width:100%;
+  }
+
+  .small-fullwidth-row .content-text{
+    border-left: 2px solid #dddddd;
+  }
+
+  .small-center{
+    text-align: center;
+  }
+
+  .work-listing .first-listing{
+    margin-top: 0.45em;
+  }
+
+  .work-listing .small-center{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .top-content h3{
+    width: 100px;
+  }
+}
+.bi--badge-sd-fill::after {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border:0.6 ridge red;
+  border-radius:99px;
+  background-color:red;
+  opacity:0.8;
+  vertical-align: -0.125em;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='white'%3E%3Cpath d='M10.338 5.968h-.844v4.06h.844c1.116 0 1.622-.667 1.622-2.02c0-1.354-.51-2.04-1.622-2.04'/%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.077 7.114c1.521 0 2.378-.764 2.378-1.88c0-1.007-.642-1.473-1.613-1.692l-.932-.216c-.527-.114-.821-.351-.821-.712c0-.466.39-.804 1.046-.804c.637 0 1.028.33 1.103.76h1.125c-.058-.923-.849-1.692-2.22-1.692c-1.322 0-2.24.717-2.24 1.815c0 .91.588 1.446 1.52 1.657l.927.215c.624.145.923.36.923.778c0 .492-.391.83-1.13.83c-.707 0-1.155-.342-1.234-.808H2.762c.052.95.79 1.75 2.315 1.75ZM8.307 11h2.19c1.81 0 2.684-1.107 2.684-3.015c0-1.894-.861-2.984-2.685-2.984H8.308z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.bi--badge-sd::after {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-color:#fff;
+  border-radius:40%;
+  opacity:0.6;
+  vertical-align: -0.125em;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23ff0000' fill-rule='evenodd' d='M15 4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.077 7.114c-1.524 0-2.263-.8-2.315-1.749h1.147c.079.466.527.809 1.234.809c.739 0 1.13-.339 1.13-.83c0-.418-.3-.634-.923-.779l-.927-.215c-.932-.21-1.52-.747-1.52-1.657c0-1.098.918-1.815 2.24-1.815c1.371 0 2.162.77 2.22 1.692H6.238c-.075-.43-.466-.76-1.103-.76c-.655 0-1.046.338-1.046.804c0 .36.294.598.821.712l.932.216c.971.22 1.613.685 1.613 1.691c0 1.117-.857 1.881-2.378 1.881M8.307 11V5.001h2.19c1.823 0 2.684 1.09 2.684 2.984c0 1.908-.874 3.015-2.685 3.015zm2.031-5.032h-.844v4.06h.844c1.116 0 1.622-.667 1.622-2.02c0-1.354-.51-2.04-1.622-2.04'/%3E%3C/svg%3E");
+}
+
+abbr
+{
+        cursor: help;
+}
+
+.tooltip
+{
+	position:static;
+	text-align:center;
+	margin-left:5%;
+	margin-right:1%;
+	background-color:transparent;
+	letter-spacing:0.9px;
+	opacity:0.9;
+	border: 0.1px ridge #cf9fff;
+	border-radius:6px;
+	font-size: smaller;
+	padding:4px;
+	width: auto;
+	box-shadow: 1px 1px 1px rgba(203, 195, 227, 0.9);
+	-moz-box-shadow: 1px 1px 1px rgba(203, 195, 227, 0.9);
+	-webkit-box-shadow: 1px 1px 1px rgba(203, 195, 227, 0.9);	
+}
+
+.good {
+font-family:Livvic; 
+border-radius:6px;
+border:1px ridge;
+background-color:transparent;}
+
+.good:hover {color:#dad100;
+font-family:Livvic; 
+border-radius:6px;
+border:1px ridge;
+background-color:transparent;}
+
+#play,
+#pause {
+	float: left;
+	width: 30px;
+}
+#play:hover,
+#pause:hover {
+	cursor: pointer;
+}
+#pause {
+	display: none;
+}
+
+</style>
+
+		<style media="print">
+			
+body, html {
+
+  padding-top: 1.5em;
+  font-size:12pt;
+  font-family: "Merriweather";
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  margin-top:0em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.pic{
+  height:4.2em;
+  width:4.2em;
+
+  transform: translate(-8em, 1.9em);
+}
+
+.profiles {
+  display:none;
+}
+
+.profiles-print{
+  display: table;
+}
+
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:25%;
+  position: relative;
+  right: 4%;
+  color:black;
+}
+
+.content-cat p {
+  font-size:0.5em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:white;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.summary p{
+  color: black;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+         </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund&family=Londrina+Outline&family=Maven+Pro&family=Noto+Sans+Sundanese&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+<script>
+console.clear();
+const menuItems = gsap.utils.toArray(".menu-item");
+let activeIndex = 0;
+
+gsap.set(menuItems, {
+  zIndex: (i) => menuItems.length - i
+});
+
+const t = gsap
+  .to(menuItems, {
+    yPercent: (i) => -110 * i,
+    duration: 0.6,
+    ease: "power1.inOut",
+    paused: true
+  })
+  .reverse();
+
+menuItems.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    t.reversed(!t.reversed());
+    if (i !== activeIndex) {
+      gsap.set(menuItems[activeIndex], { zIndex: activeIndex });
+      activeIndex = i;
+      gsap.set(item, { zIndex: menuItems.length + 1 });
+    }
+  });
+});
+</script>
+	</head>
+	<body>
+ 
+<img style="position: -webkit-sticky;position: sticky;opacity:0.5;z-index:999;top:200px" id="play" onclick="toggleAudio()" src="https://res.cloudinary.com/dchan630/image/upload/v1481676817/play_ierlvl.png" class="img-fluid" alt="Responsive image"><audio id='player' src='https://masjidraya-jatimulya.com/-reader.MP3'></audio>
+<img style="position: -webkit-sticky;position: sticky;opacity:0.5;z-index:999;top:200px" id="pause" onclick="toggleAudio()" src="https://res.cloudinary.com/dchan630/image/upload/v1481676820/pause_nqfaht.png" class="img-fluid" alt="Responsive image">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+function toggleAudio() {
+  var audioElement = document.getElementById('player')
+  var soundOn = document.getElementById('play')
+  var soundOff = document.getElementById('pause')
+  if (audioElement.paused) {
+    audioElement.play();
+    $(soundOn).show();
+    $(soundOff).hide();
+  } else {
+    audioElement.pause();
+    $(soundOn).hide();
+    $(soundOff).show();
+  }
+}
+ </script>	   
+
+		<div style="border-radius:6px" class="resume-wrapper">
+			<article style="border-radius:6px" class="paper">
+					<div class="content-wrapper">
+						<header>
+							<div class="header-content">
+								<div class="header-text">
+								<span><img style="border-radius:2.5%" class="" width="25%" src="//faqir.pages.dev/sd/sd.png"/></span><span>	<center><h2 style="font-family: Rubik Doodle Shadow, system-ui; font-size:x-large; letter-spacing:2.7px; text-shadow: 0 0.25px 0.5px #aD1BAA;" class="animate__animated animate__heartBeat">
+SDAT Taman Firdaus</h2></center></span>
+									<p class="subtitle">NPSN: 69873993 &nbsp;&nbsp; ▪ &nbsp;&nbsp; NSS: 102026512028 </p>
+								</div>
+							</div>
+						</header>
+<section class="content summary">
+								<div class="row small-fullwidth-row">
+									<div class="content-cat">
+									 <h3>About&nbsp; <abbr title=" &nbsp;𝒌𝒆𝒎.𝒍𝒖/𝒂𝒕𝒇&nbsp;"><a style="text-decoration:none" href="//kem.lu/atf"> <span class="bi--badge-sd-fill"></span> </a></abbr></h3>
+					
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>
+<script>
+$(document).ready(function() {	
+	
+	$('abbr').each(function(){		
+		$(this).data('title',$(this).attr('title'));
+		$(this).removeAttr('title');
+	
+	});
+  
+	$('abbr').mouseover(function() {		
+		// first remove all existing abbreviation tooltips
+		$('abbr').next('.tooltip').remove();
+		
+		// create the tooltip
+		$(this).after('<span class="tooltip">' + $(this).data('title') + '</span>');
+		
+		// position the tooltip 4 pixels above and 4 pixels to the left of the abbreviation
+		var left = $(this).position().left + $(this).width() + 4;
+		var top = $(this).position().top - 4;
+		$(this).next().css('left',left);
+		$(this).next().css('top',top);				
+		
+	});
+	
+	$('abbr').click(function(){
+		
+		$(this).mouseover();
+		
+		// after a slight 2 second fade, fade out the tooltip for 1 second
+		$(this).next().animate({opacity: 0.9},{duration: 1000, complete: function(){
+			$(this).fadeOut(500);
+		}});
+		
+	});
+	
+	$('abbr').mouseout(function(){
+			
+		$(this).next('.tooltip').remove();				
+
+	});	
+	
+});
+</script>
+    </div>
+				<!-- -->
+<div class="kontent-text work-content">
+										<p  style="font-family: Maven Pro, sans-serif; font-size:small; letter-spacing:0.8px;line-height:1.4;margin-right:0.5%">
+Sekolah Dasar Alam Terpadu Taman Firdaus [<em>sdat.tf</em>] merupakan tingkat lanjutan dari pendidikan sebelumnya yaitu KB TK Alam Taman Firdaus. Cita-cita pendiri sekolah tersebut sungguh mulia, namun sekarang operasional dan kepemilikannya diteruskan oleh pihak keluarga sebab beliau sudah almarhum. Rumusan visi misi sekolah dibuat menurut arahan almarhum Pak Haji oleh team manajemen yayasan yang memadukan konsep keislaman, alam serta teknologi dalam program unggulannya; sehingga bermanfaat, berkarakter & diakui status akreditasi oleh sistem di kedinasan juga masyarakat sekitar. Kepemimpinan di SDAT Taman Firdaus telah berganti selama tiga periode kepala sekolah. Alumni GTY pun ada yang lulus program PPPK. Sedangkan alumni siswa-siswi yang telah <b>lulus</b> ada sembilan angkatan sampai dengan TA.2023/2024.
+            </p>
+									</div>
+								</div>
+							</section>
+
+						<!-- CONTACT -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Kontak</h3>
+								</div>
+								<div class="content-text">
+										<ul>
+											<li><a style="text-decoration:none;font-size:1.02em;" href="https://accounts.zoho.eu/register?servicename=AaaServer&serviceurl=https%3A%2F%2Faccounts.zoho.eu%2Fu%2Fh">Email</a></li>
+											<li><a href="mailto:alamtamanfirdaus2018@gmail.com" style="font-size:10px;border:0 ridge;background-color:transparent;"><textarea style="background-color:transparent;border:0.1px ridge grey;border-radius:2px" rows="1.3" cols="27" placeholder="alamtamanfirdaus2018@gmail.com"></textarea></a></li>
+										</ul>
+
+
+										<ul>
+											<li>Website</li>
+											<li><a href="//sdat-tamanfirdaus.sch.id" style=""> sdat-tamanfirdaus.sch.id </a>&nbsp; <span style="font-family:Noto Sans Sundanese, sans-serif; visibility:hidden"> ᮈᮊ </span></li>
+										</ul>
+
+										<ul>
+											<li>Telepon</li>
+											<li><a href="tel:+622182616991" style=""> 021-82616991</a></li>
+										</ul>
+								</div>
+							</div>
+						</section>
+
+						<!-- LOCATION -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Lokasi</h3>
+								</div>
+<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+<strong>Negara </strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span> (ID) </span>
+Indonesia
+</p>
+<p><span class="name">
+<strong>Provinsi</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Jabar </span> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; <strong> Kota</strong></span>
+Bekasi
+</p>
+<p><span class="name">
+<strong>Alamat</strong></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span> Mustikajaya 17168</span>
+<br/><span><i>(Sekolah)</i></span>&nbsp;&nbsp;&nbsp; Jln. Bayan 𝙸𝙸 RT.03/11 Kamp. Ciketing
+<br/><span><i>(Akses Jalan)</i> </span><span style="letter-spacing: 1px">  MGT Blok J1 RT.06/25 <br/>
+</p>
+								</div>
+<!--								-->
+
+									</div>
+								</section>
+
+
+						<!-- LANGUAGE -->
+
+						<!-- PROFILES for website-->
+							<section class="content profiles top-content">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Sosmed</h3>
+									</div>
+									<div style="justify-content: space-between;" class="content-text profiles-listing">
+										<ul>
+													<li>
+													<a href="https://www.instagram.com/sdat.tamanfirdaus" target="_blank">
+														<i class="bi bi-instagram" style="font-size:x-large;color:grey"></i>
+														<span class="network"></span>
+													</a>
+													</li>
+													<li>
+													<a href="https://facebook.com/sdat.tf" target="_blank">
+														<i class="fa fa-facebook-square" style="font-size:27px;color:grey"></i>
+														<span class="network"></span>
+													</a>
+													</li>
+<!--										-->
+										</ul>
+									</div>
+								</div>
+							</section>
+						<!-- PROFILES for print -->
+							<section class="content profiles-print">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text">
+											<ul>
+												<li>twitter</li>
+												<li><a href="https://twitter.com/at_tamanfirdaus">twitter.com/</a></li>
+											</ul>
+											<ul>
+												<li>github</li>
+												<li><a href="https://github.com/sdat-tamanfirdaus">github.com/</a></li>
+											</ul>
+									</div>
+								</div>
+							</section>
+
+							
+<!--							-->
+				</div>
+			</article>
+
+ <!--         -->  			
+			<footer style="height:100%;margin-bottom:1%">
+<div id="myDIV">
+	<div class="item1"><a style="text-decoration:none;color:lime;text-shadow: 0px 0.2px 0.1px rgba(0,0,0,9)" href="https://sites.google.com/view/p-r-a-m-u-k-a/anggota"><abbr style="margin-right:5%; border: 0.1px ridge #1faf23;" title=" ⚜ &nbsp;𝑝𝑟𝑎𝑚𝑢𝑘𝑎&nbsp;"><img style="border-radius:6px" src="https://eka.dartiwi.my.id/sd/sdat_tf.jpg" alt></abbr></a></div>
+	<div class="item2"> <a style="text-decoration:none;color:#ff8c2c" href="https://maps.app.goo.gl/7HhfEtAYB6Xerv8G8"><abbr style="border: 0.1px ridge #ff8c2c;" title="📍 &nbsp;𝒎𝒂𝒑&nbsp;"><img type="" class="" data-toggle="" data-placement="top" title="📍 𝒎𝒂𝒑" alt="Google Map" style="border-radius:6px" src="https://eka.dartiwi.my.id/sd/sdat-tf.jpg"></abbr></a></div>
+
+</div>
+</footer>
+		 
+<div style="margin-left:10%; margin-right:10%; display: flex; justify-content: space-between;">
+<span><a href="https://api.whatsapp.com/send/?phone=6289522303281&text=Salam " target="_blank">
+<sub><i class="fa fa-whatsapp" style="background: linear-gradient(315deg, #127c7e 0%, #80ff72 74%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+ -webkit-text-fill-color:transparent;font-size:xx-large"></i></sub>
+<span class="network"></span></a></span> &nbsp;&nbsp; 
+
+ <span> 
+<button id="komen" class="btn good" style="font-family:Livvic; border-radius:6px;border:1px ridge;background-color:transparent" onclick="komen()"> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+	<rect width="24" height="24" fill="none" />
+	<g fill="none">
+		<path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+		<path fill="#828282" d="M16 4a3 3 0 0 1 2.995 2.824L19 7v2a3 3 0 0 1 2.995 2.824L22 12v4a3 3 0 0 1-2.824 2.995L19 19v.966c0 1.02-1.143 1.594-1.954 1.033l-.096-.072L14.638 19H11a3 3 0 0 1-1.998-.762l-.14-.134L7 19.5c-.791.593-1.906.075-1.994-.879L5 18.5V17a3 3 0 0 1-2.995-2.824L2 14V7a3 3 0 0 1 2.824-2.995L5 4zm3 7h-8a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3.638a2 2 0 0 1 1.28.464l1.088.906A1.5 1.5 0 0 1 18.5 17h.5a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1m-3-5H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h.5A1.5 1.5 0 0 1 7 16.5v.5l1.01-.757A3 3 0 0 1 8 16v-4a3 3 0 0 1 3-3h6V7a1 1 0 0 0-1-1" />
+	</g>
+</svg> Komentar </button> </span> &nbsp; &nbsp; 
+ <span><button style="font-family:Livvic;border:1px ridge;background-color:transparent;" type="button" class="btn good"
+onclick="document.getElementById('demo').innerHTML = Date()">&nbsp; Waktu &nbsp;
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+	<rect width="512" height="512" fill="none" />
+	<mask id="circleFlagsId0">
+		<circle cx="256" cy="256" r="256" fill="#fff" />
+	</mask>
+	<g mask="url(#circleFlagsId0)">
+		<path fill="#eee" d="m0 256l249.6-41.3L512 256v256H0z" />
+		<path fill="#e80025" d="M0 0h512v256H0z" />
+	</g>
+</svg> &nbsp; </button></span> &nbsp; &nbsp; &nbsp;
+<span>
+
+<sub><svg style="border-color:grey;border-style: dotted; border-radius:50%; font-size:small" onclick="myFunction()" xmlns="http://www.w3.org/2000/svg" width="2.2em" height="2.2em" viewBox="0 0 21 21">
+	<path fill="#fff" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" d="M11.5 3.5c1.328 0 2.57.37 3.628 1.012a6 6 0 0 0-.001 11.977A7 7 0 1 1 11.5 3.5" />
+</svg></sub>
+<!-- -->
+</span>
+</div>
+<center>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script> 
+<!-- -->
+</center>
+
+<center>
+<!-- -->
+
+<p style="font-family:VT323; font-size:x-large" id="jam"></p>
+<iframe class="box good" id="koment" style="margin-left:1%; display:none" frameborder="0" height="230px" width="99%" src="https://c.q-ta.pages.dev"></iframe>
+
+<script>
+function komen() {
+  var x = document.getElementById("koment");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</center>
+
+<br/><br/>
+<script>
+        $(function() {
+            $(this).bind("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        }); 
+    (function($){
+    
+      $.fn.ctrl = function(key, callback) {
+
+    	if (!$.isArray(key)) {
+           key = [key];
+        }
+    	callback = callback || function(){ return false; }
+        return $(this).keydown(function(e) {
+
+    		$.each(key,function(i,k){
+    			if(e.keyCode == k.toUpperCase().charCodeAt(0) && e.ctrlKey) {
+    				return callback(e);
+    			}
+    		});
+    		return true;
+        });
+    };
+    
+    $.fn.disableSelection = function() {
+
+    	this.ctrl(['a','s','c']);
+
+        return this.attr('unselectable', 'on')
+                   .css({'-moz-user-select':'-moz-none',
+                         '-moz-user-select':'none',
+    					 '-o-user-select':'none',
+    					 '-khtml-user-select':'none',
+    					 '-webkit-user-select':'none',
+    					 '-ms-user-select':'none',
+    					 'user-select':'none'})
+    	           .bind('selectstart', function(){ return false; });
+    };
+    
+    })(jQuery);
+    $(':not(input,select,textarea)').disableSelection();
+</script>
+<div class="menu-container"> <div class="menu-item">
+<marquee scrolldelay="40" scrollamount="2" direction="left" behavior="scroll" width="99%">
+<font color="" face="VT323" size="4">  – 79 Tahun HUT RI Nusantara Baru Indonesia Maju • Wasalam • Terima kasih atas kontribusi maupun hal lain nya, <a style="text-decoration:none" href="//saweria.co/kawin">بارك اللہ</a> – <a style="text-decoration:none" href="https://sekolahdasaralamtamanfirdaus2018.blogspot.com"> sdattf's blog</a> </font></marquee><br><br><br>
+<p style="font-family: 'VT323';font-size: 23px;margin:7%;
+  text-shadow: 1px 1px 2px #fffffb, 1px -1px 2px #00000c, -1px 1px 2px #fffffd,
+    -1px -1px 2px #b026ff, 0 0 16px #fffffe, 0 0 64px #b026ff;" id="demo"></p>
+
+<a href="#" class="ignielToTop"></a> </div>
+</div>
+<center style="font-family: 'VT323';font-size: 23px;margin:0.5%;border-radius:6px;">
+<img style="border-radius:6px; border:0.1px ridge red;" src="https://g-a-z-a.cloud/HUT-RI 79.png" alt="" width="100%" /><br><br>
+Tahun Baru 1446 H. menuju HUT<span style="display:none">AN</span><span style="visibility:hidden">-</span>RI pada
+<i style="font-family: 'VT323';font-size: 23px;text-decoration:none" target="_blank"> tanggal <script>document.write(new Date().getDate())</script>
+</i> -
+<i style="font-family: 'VT323';font-size: 23px;text-decoration:none" target="_blank" > <script>document.write(new Date().getMonth()+1)</script></i> -
+<i style="font-family: 'VT323';font-size: 23px;text-decoration:none" target="_blank"> <script>document.write(new Date().getFullYear())</script></i>
+
+
+            <div id="countdown"></div>
+        <div id="google_translate_element"></div>    
+
+<script>
+var countDownDate = new Date("Aug 17, 2024 00:00:00").getTime();
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    var countdownElement = document.getElementById("countdown");
+
+    countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+        clearInterval(x);
+        countdownElement.innerHTML = "EXPIRED";
+    }
+
+    // Tambahkan class 'float-animation' setiap detik
+    countdownElement.classList.toggle('float-animation');
+}, 1000);
+</script>
+
+<script async="async" src="https://cse.google.com/cse.js?cx=37b83edcc4d7e4ba3"> </script> 
+<div width="50%" style="color:grey;overflow-wrap:break-word;word-break:break-word;" class="gcse-search"></div>
+
+</center>
+	</body>
+</html>
